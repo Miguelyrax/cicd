@@ -52,22 +52,7 @@ android {
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
-    flavorDimensions "cicd"
 
-    productFlavors {
-        dev {
-            dimension "cicd"
-            applicationIdSuffix ".dev"
-            resValue "string", "app_name", "Counter App Dev"
-            versionNameSuffix ".dev"
-        }
-        prod {
-            dimension "cicd"
-            applicationIdSuffix ".prod"
-            resValue "string", "app_name", "Counter App Prod"
-            versionNameSuffix ".prod"
-        }
-    }
 
     buildTypes {
         release {
