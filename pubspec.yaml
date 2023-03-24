@@ -37,9 +37,43 @@ dependencies:
 
 dev_dependencies:
   flutter_lints: ^2.0.0
+  flutter_flavorizr: ^2.1.5
   flutter_test:
     sdk: flutter
 
+flavorizr:
+  app:
+    android:
+      flavorDimensions: "flavor-type"
+    ios:
+
+  flavors:
+    prod:
+      app:
+        name: "Prod app"
+
+      android:
+        applicationId: "com.malbadev.appCicd"
+        firebase:
+          config: "firebase/android/prod/google-services.json"
+
+      ios:
+        bundleId: "com.malbadev.appCicd"
+        firebase:
+          config: "firebase/ios/prod/GoogleService-Info.plist"
+
+    dev:
+      app:
+        name: "Dev App"
+
+      android:
+        applicationId: "com.malbadev.appCicd.dev"
+        firebase:
+          config: "firebase/android/dev/google-services.json"
+      ios:
+        bundleId: "com.malbadev.appCicd"
+        firebase:
+          config: "firebase/ios/dev/GoogleService-Info.plist"
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter packages.
@@ -52,6 +86,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - config/
+    - firebase/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see

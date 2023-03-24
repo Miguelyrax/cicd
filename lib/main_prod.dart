@@ -1,6 +1,8 @@
-import 'environment.dart';
-import 'main_common.dart';
+import 'package:flutter/material.dart';
+import 'app.dart';
+import 'flavors.dart';
 
-Future<void> main() async {
-  await mainCommon(Environment.prod);
+void main() {
+  F.appFlavor = Flavor.PROD;
+  runApp(App());
 }
